@@ -1,5 +1,5 @@
 import closeIcon from "../assets/close.svg";
-import React from "react";
+import React, { useState } from "react";
 
 interface PdfModalProps {
   file: {
@@ -13,6 +13,8 @@ interface PdfModalProps {
 
 const PdfModal: React.FC<PdfModalProps> = ({ file, onClose }) => {
   if (!file) return null;
+
+  const [loading, setLoading] = useState(true);
 
   return (
     <div className="fixed inset-0 bg-black/80 backdrop-blur-sm flex items-center justify-center z-50">
@@ -28,11 +30,17 @@ const PdfModal: React.FC<PdfModalProps> = ({ file, onClose }) => {
             <img src={closeIcon} alt="Close" className="w-8 h-8" />
           </button>
         </div>
-        <div className="flex-1 w-full bg-slate-200 p-2 rounded-b-2xl">
+        <div className="flex-1 w-full bg-slate-200 p-2 rounded-b-2xl relative">
+          {loading && (
+            <div className="absolute inset-0 flex items-center justify-center">
+              <div className="w-10 h-10 border-4 border-violet-400 border-t-transparent rounded-full animate-spin"></div>
+            </div>
+          )}
           <iframe
             src={`https://drive.google.com/file/d/${file.id}/preview`}
             title={file.name}
-            className="w-full h-full rounded-md border-0"
+            className={`w-full h-full rounded-md border-0 transition-opacity duration-500 ease-in-out ${loading ? "opacity-0" : "opacity-100"}`}
+            onLoad={() => setLoading(false)}
           ></iframe>
         </div>
       </div>

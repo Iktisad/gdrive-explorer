@@ -95,7 +95,7 @@ function App() {
             <button
               key={file.id}
               onClick={() => setSelectedPdf(file)}
-              className="bg-white rounded-xl overflow-hidden border border-gray-200 shadow group transition-all duration-200 ease-in-out hover:shadow-md hover:-translate-y-1 w-full text-left"
+              className="bg-white rounded-xl overflow-hidden border border-gray-200 shadow group transform transition-transform duration-300 ease-in-out hover:-translate-y-2 hover:rotate-[0.5deg] hover:shadow-lg w-full text-left"
             >
               <div className="h-40 bg-gray-100 flex items-center justify-center">
                 <img
