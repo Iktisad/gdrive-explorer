@@ -9,12 +9,6 @@ A lightweight React + TypeScript + Vite application that lets you view publicly 
 
 ---
 
-## 🚀 Demo
-
-> Coming soon or deploy on [Vercel](https://vercel.com/) or [Netlify](https://netlify.com/)
-
----
-
 ## 📁 Features
 
 - ✅ Fetches files from a public Google Drive folder
