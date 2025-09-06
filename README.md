@@ -19,6 +19,16 @@ A lightweight React + TypeScript + Vite application that lets you view publicly 
 
 ---
 
+## 📸 Screenshots
+
+<div style="display: flex; gap: 10px; flex-wrap: wrap;">
+  <img src="./docs/image_1.png" alt="Screenshot 1" width="300"/>
+  <img src="./docs/image_2.png" alt="Screenshot 2" width="300"/>
+  <img src="./docs/image_3.png" alt="Screenshot 3" width="300"/>
+</div>
+
+---
+
 ## 🛠 Setup Instructions
 
 ### 1. Clone the Repository
@@ -61,14 +71,6 @@ npm run preview
 ```
 
 ---
-
-## 📸 Screenshots
-
-<div style="display: flex; gap: 10px; flex-wrap: wrap;">
-  <img src="./docs/image_1.png" alt="Screenshot 1" width="300"/>
-  <img src="./docs/image_2.png" alt="Screenshot 2" width="300"/>
-  <img src="./docs/image_3.png" alt="Screenshot 3" width="300"/>
-</div>
 
 ## 🧩 Tech Stack
 
